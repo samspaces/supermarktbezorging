@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>J&S Bezorgers</title>
 
 <style>
@@ -22,6 +23,10 @@ body{
     background:#eef6ff;
     color:#173b63;
 }
+
+/* =========================
+   HEADER
+========================= */
 
 header{
     background:linear-gradient(135deg,#1976d2,#69b3ff);
@@ -57,6 +62,10 @@ header{
     font-size:34px;
     line-height:1.4;
 }
+
+/* =========================
+   NAVIGATIE
+========================= */
 
 nav{
     position:sticky;
@@ -100,6 +109,10 @@ nav{
     color:#0d5aa0;
 }
 
+/* =========================
+   SECTIES
+========================= */
+
 section{
     max-width:1100px;
     margin:auto;
@@ -112,6 +125,15 @@ section{
     padding:28px;
     box-shadow:0 6px 18px rgba(0,0,0,.08);
 }
+
+.card h2{
+    color:#1976d2;
+    margin-bottom:20px;
+}
+
+/* =========================
+   OVER ONS
+========================= */
 
 .about{
     display:grid;
@@ -139,6 +161,10 @@ section{
     border-radius:16px;
 }
 
+/* =========================
+   TARIEVEN
+========================= */
+
 table{
     width:100%;
     border-collapse:collapse;
@@ -157,6 +183,53 @@ td{
     border-bottom:1px solid #ddd;
 }
 
+/* =========================
+   WHATSAPP
+========================= */
+
+.whatsapp-card{
+    background:linear-gradient(135deg,#1976d2,#69b3ff);
+    color:white;
+    text-align:center;
+}
+
+.whatsapp-card h2{
+    color:white;
+    font-size:32px;
+    margin-bottom:15px;
+}
+
+.whatsapp-card p{
+    font-size:19px;
+    line-height:1.7;
+}
+
+.whatsapp-card .intro{
+    font-size:21px;
+    line-height:1.6;
+}
+
+.whatsapp-button{
+    display:inline-block;
+    margin-top:15px;
+    padding:14px 24px;
+    background:white;
+    color:#1976d2;
+    text-decoration:none;
+    border-radius:999px;
+    font-weight:bold;
+    font-size:17px;
+    transition:.25s;
+}
+
+.whatsapp-button:hover{
+    transform:scale(1.05);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
 footer{
     background:#0d5aa0;
     color:white;
@@ -165,317 +238,581 @@ footer{
     margin-top:30px;
 }
 
+/* =========================
+   MOBIEL
+========================= */
+
 @media(max-width:768px){
 
-.hero{
-grid-template-columns:1fr;
-text-align:center;
-}
+    .hero{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
 
-.hero img{
-height:auto;
-}
+    .hero img{
+        height:auto;
+    }
 
-.hero h1{
-font-size:44px;
-}
+    .hero h1{
+        font-size:44px;
+    }
 
-.hero p{
-font-size:22px;
-}
+    .hero p{
+        font-size:22px;
+    }
 
-.about{
-grid-template-columns:1fr;
-}
+    .about{
+        grid-template-columns:1fr;
+    }
 
-.mobile{
-display:block;
-}
+    .mobile{
+        display:block;
+    }
 
-.menu{
-display:none;
-flex-direction:column;
-padding:10px;
-}
+    .menu{
+        display:none;
+        flex-direction:column;
+        padding:10px;
+    }
 
-.menu.open{
-display:flex;
-}
+    .menu.open{
+        display:flex;
+    }
 
-.fullimg{
-width:90%;
-}
+    .menu a{
+        text-align:center;
+    }
+
+    .fullimg{
+        width:90%;
+    }
+
+    .whatsapp-card h2{
+        font-size:27px;
+    }
+
+    .whatsapp-card .intro{
+        font-size:19px;
+    }
 
 }
 
 </style>
-
 </head>
 
 <body>
 
+<!-- =========================
+     HEADER
+========================= -->
+
 <header id="home">
 
-<div class="hero">
+    <div class="hero">
 
-<div>
+        <div>
 
-<h1> J&S Bezorgers</h1>
+            <h1>J&amp;S Bezorgers</h1>
 
-<p>
-Snel, betrouwbaar en vriendelijk bezorgen in Pijnacker en omgeving.
-</p>
+            <p>
+                Snel, betrouwbaar en vriendelijk bezorgen
+                in Pijnacker en omgeving.
+            </p>
 
-</div>
+        </div>
 
-<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80" alt="Bezorging">
+        <img
+            src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80"
+            alt="Bezorging"
+        >
 
-</div>
+    </div>
 
 </header>
 
+
+<!-- =========================
+     NAVIGATIE
+========================= -->
+
 <nav>
 
-<button class="mobile" onclick="toggleMenu()">☰ Menu</button>
+    <button class="mobile" onclick="toggleMenu()">
+        ☰ Menu
+    </button>
 
-<ul class="menu" id="menu">
-<li><a href="#home" onclick="closeMenu()">Home</a></li>
-<li><a href="#over" onclick="closeMenu()">Over ons</a></li>
-<li><a href="#tarieven" onclick="closeMenu()">Tarieven</a></li>
-<li><a href="#boodschappen" onclick="closeMenu()">Iets vergeten?</a></li>
-<li><a href="#waarom" onclick="closeMenu()">Waarom kiezen?</a></li>
-<li><a href="#werktijden" onclick="closeMenu()">Werktijden</a></li>
-<li><a href="#gebied" onclick="closeMenu()">Bezorggebied</a></li>
-<li><a href="#contact" onclick="closeMenu()">Contact</a></li>
-</ul>
+    <ul class="menu" id="menu">
+
+        <li>
+            <a href="#home" onclick="closeMenu()">Home</a>
+        </li>
+
+        <li>
+            <a href="#over" onclick="closeMenu()">Over ons</a>
+        </li>
+
+        <li>
+            <a href="#tarieven" onclick="closeMenu()">Tarieven</a>
+        </li>
+
+        <li>
+            <a href="#whatsapp-kanaal" onclick="closeMenu()">
+                WhatsApp-kanaal
+            </a>
+        </li>
+
+        <li>
+            <a href="#boodschappen" onclick="closeMenu()">
+                Iets vergeten?
+            </a>
+        </li>
+
+        <li>
+            <a href="#waarom" onclick="closeMenu()">
+                Waarom kiezen?
+            </a>
+        </li>
+
+        <li>
+            <a href="#werktijden" onclick="closeMenu()">
+                Werktijden
+            </a>
+        </li>
+
+        <li>
+            <a href="#gebied" onclick="closeMenu()">
+                Bezorggebied
+            </a>
+        </li>
+
+        <li>
+            <a href="#contact" onclick="closeMenu()">
+                Contact
+            </a>
+        </li>
+
+    </ul>
 
 </nav>
 
+
+<!-- =========================
+     OVER ONS
+========================= -->
+
 <section id="over">
 
-<div class="card">
+    <div class="card">
 
-<div class="about">
+        <div class="about">
 
-<div class="about-text">
+            <div class="about-text">
 
-<h2>Over ons</h2>
+                <h2>Over ons</h2>
 
-<p>
-Wij zijn Jason (11) en Sam (10). Wij bezorgen jouw favoriete maaltijden snel, veilig en met een glimlach.
-</p>
+                <p>
+                    Wij zijn Jason (11) en Sam (10).
+                    Wij bezorgen jouw favoriete maaltijden snel,
+                    veilig en met een glimlach.
+                </p>
 
-<p>
-Wij zijn een lokaal bezorgbedrijf uit <strong>Pijnacker</strong> en kennen de omgeving goed. Daardoor kunnen wij efficiënt bezorgen en een betrouwbare service bieden.
-</p>
+                <p>
+                    Wij zijn een lokaal bezorgbedrijf uit
+                    <strong>Pijnacker</strong> en kennen de omgeving goed.
+                    Daardoor kunnen wij efficiënt bezorgen en een
+                    betrouwbare service bieden.
+                </p>
 
-<p>
-Klantvriendelijkheid, snelheid en betrouwbaarheid staan bij ons altijd voorop.
-</p>
+                <p>
+                    Klantvriendelijkheid, snelheid en betrouwbaarheid
+                    staan bij ons altijd voorop.
+                </p>
 
-</div>
+            </div>
 
-<div class="about-image">
+            <div class="about-image">
 
-<img
-class="fullimg"
-src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1200&q=80"
-alt="Eten">
+                <img
+                    class="fullimg"
+                    src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1200&q=80"
+                    alt="Eten"
+                >
 
-</div>
+            </div>
 
-</div>
+        </div>
 
-</div>
+    </div>
 
 </section>
+
+
+<!-- =========================
+     TARIEVEN
+========================= -->
+
 <section id="tarieven">
 
-<div class="card">
+    <div class="card">
 
-<h2> Tarieven</h2>
+        <h2>Tarieven</h2>
 
-<table>
+        <table>
 
-<tr>
-<th>Dienst</th>
-<th>Prijs</th>
-</tr>
+            <tr>
+                <th>Dienst</th>
+                <th>Prijs</th>
+            </tr>
 
-<tr>
-<td>Bezorging binnen Pijnacker</td>
-<td>€2,50</td>
-</tr>
+            <tr>
+                <td>Bezorging binnen Pijnacker</td>
+                <td>€2,50</td>
+            </tr>
 
-<tr>
-<td>Bezorging omgeving Pijnacker</td>
-<td>€3,50</td>
-</tr>
+            <tr>
+                <td>Bezorging omgeving Pijnacker</td>
+                <td>€3,50</td>
+            </tr>
 
-</table>
+        </table>
 
-</div>
+    </div>
 
 </section>
+
+
+<!-- =========================
+     WHATSAPP KANAAL
+========================= -->
+
+<section id="whatsapp-kanaal">
+
+    <div class="card whatsapp-card">
+
+        <h2>
+            📱 Volg ons WhatsApp-kanaal
+        </h2>
+
+        <p class="intro">
+            Blijf op de hoogte van nieuws, updates en onze bezorgservice!
+        </p>
+
+        <p>
+            <strong>
+                Volg ons kanaal op WhatsApp
+            </strong>
+            en mis niets.
+        </p>
+
+        <a
+            class="whatsapp-button"
+            href="https://whatsapp.com/channel/0029Vb94FT5B4hdIpT0Mtx2d"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Volg ons WhatsApp-kanaal →
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     IETS VERGETEN
+========================= -->
 
 <section id="boodschappen">
 
-<div class="card">
+    <div class="card">
 
-<h2> Iets vergeten bij de supermarkt?</h2>
+        <h2>
+            🛒 Iets vergeten bij de supermarkt?
+        </h2>
 
-<p style="font-size:18px;line-height:1.8;">
-Ben je iets vergeten bij de supermarkt? Geen probleem!
-Je kunt ons vragen om het voor je op te halen en bij je thuis te bezorgen.
-</p>
+        <p style="font-size:18px;line-height:1.8;">
+            Ben je iets vergeten bij de supermarkt?
+            Geen probleem!
+            Je kunt ons vragen om het voor je op te halen
+            en bij je thuis te bezorgen.
+        </p>
 
-<p style="font-size:18px;line-height:1.8;">
-Stuur ons gewoon een berichtje met wat je nodig hebt. Wij kijken dan of we het voor je kunnen halen.
-</p>
+        <p style="font-size:18px;line-height:1.8;">
+            Stuur ons gewoon een berichtje met wat je nodig hebt.
+            Wij kijken dan of we het voor je kunnen halen.
+        </p>
 
-<p style="font-size:18px;line-height:1.8;">
-<strong>Zo hoef je niet zelf helemaal terug naar de supermarkt!</strong> 🚲🛒
-</p>
+        <p style="font-size:18px;line-height:1.8;">
+            <strong>
+                Zo hoef je niet zelf helemaal terug naar de supermarkt!
+            </strong>
+            🚲🛒
+        </p>
 
-</div>
+    </div>
 
 </section>
+
+
+<!-- =========================
+     WAAROM KIEZEN
+========================= -->
 
 <section id="waarom">
 
-<div class="card">
+    <div class="card">
 
-<h2>Waarom kiezen voor J&amp;S?</h2>
+        <h2>
+            Waarom kiezen voor J&amp;S?
+        </h2>
 
-<ul style="margin-left:25px;line-height:2;font-size:18px;">
+        <ul style="margin-left:25px;line-height:2;font-size:18px;">
 
-<li> Snelle bezorging</li>
+            <li>
+                Snelle bezorging
+            </li>
 
-<li> Lokale bezorgers uit Pijnacker</li>
+            <li>
+                Lokale bezorgers uit Pijnacker
+            </li>
 
-<li> Vriendelijke service</li>
+            <li>
+                Vriendelijke service
+            </li>
 
-<li> Betrouwbare bezorgtijden</li>
+            <li>
+                Betrouwbare bezorgtijden
+            </li>
 
-</ul>
+        </ul>
 
-</div>
+    </div>
 
 </section>
+
+
+<!-- =========================
+     WERKTIJDEN
+========================= -->
 
 <section id="werktijden">
 
-<div class="card">
+    <div class="card">
 
-<h2> Werktijden</h2>
+        <h2>
+            Werktijden
+        </h2>
 
-<p style="font-size:18px;">
-<strong>Maandag t/m Vrijdag</strong><br>
-14:00 - 18:00
-</p>
+        <p style="font-size:18px;">
 
-<br>
+            <strong>
+                Maandag t/m Vrijdag
+            </strong>
 
-<p style="font-size:18px;">
-<strong>Zaterdag &amp; Zondag</strong><br>
-09:00 - 19:00
-</p>
-<br><br>
-<strong>Neem contact met ons op voor specifieke tijden</strong>
-</div>
+            <br>
+
+            14:00 - 18:00
+
+        </p>
+
+        <br>
+
+        <p style="font-size:18px;">
+
+            <strong>
+                Zaterdag &amp; Zondag
+            </strong>
+
+            <br>
+
+            09:00 - 19:00
+
+        </p>
+
+        <br>
+
+        <strong>
+            Neem contact met ons op voor specifieke tijden
+        </strong>
+
+    </div>
 
 </section>
+
+
+<!-- =========================
+     BEZORGGEbied
+========================= -->
 
 <section id="gebied">
 
-<div class="card">
+    <div class="card">
 
-<h2> Bezorggebied</h2>
+        <h2>
+            Bezorggebied
+        </h2>
 
-<p style="font-size:18px;line-height:1.8;">
-Wij bezorgen in <strong>Pijnacker</strong> en de omliggende omgeving.
-Neem gerust contact met ons op om te vragen of wij ook bij jou bezorgen.
-</p>
+        <p style="font-size:18px;line-height:1.8;">
 
-</div>
+            Wij bezorgen in
+            <strong>Pijnacker</strong>
+            en de omliggende omgeving.
+
+            Neem gerust contact met ons op om te vragen
+            of wij ook bij jou bezorgen.
+
+        </p>
+
+    </div>
 
 </section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
 
 <section id="contact">
 
-<div class="card">
+    <div class="card">
 
-<h2> Contact</h2>
+        <h2>
+            Contact
+        </h2>
 
-<p style="font-size:18px;line-height:2;">
+        <p style="font-size:18px;line-height:2;">
 
-<strong>Telefoon</strong><br>
+            <strong>
+                Telefoon
+            </strong>
 
-06-17772871 (Jason)
+            <br>
 
-<br>
+            06-17772871 (Jason)
 
-06-28742681 (Sam)
-    
-<br><br>
+            <br>
 
-<strong>E-mail</strong><br>
+            06-28742681 (Sam)
 
-samschollaart@gmail.com
+            <br><br>
 
-<br>
+            <strong>
+                E-mail
+            </strong>
 
-fangyuan.jason.zhang@gmail.com
+            <br>
 
-</p>
+            samschollaart@gmail.com
 
-</div>
+            <br>
+
+            fangyuan.jason.zhang@gmail.com
+
+        </p>
+
+    </div>
 
 </section>
+
+
+<!-- =========================
+     HONDENUITLAATSERVICE
+========================= -->
 
 <section>
 
-<div class="card" style="background:linear-gradient(135deg,#1976d2,#69b3ff);color:white;text-align:center;">
+    <div
+        class="card"
+        style="
+            background:linear-gradient(135deg,#1976d2,#69b3ff);
+            color:white;
+            text-align:center;
+        "
+    >
 
-<h2 style="font-size:32px;margin-bottom:15px;">
-🐶 Ook een hond?
-</h2>
+        <h2
+            style="
+                color:white;
+                font-size:32px;
+                margin-bottom:15px;
+            "
+        >
+            🐶 Ook een hond?
+        </h2>
 
-<p style="font-size:21px;line-height:1.6;">
-Geen tijd om je hond uit te laten?
-</p>
+        <p
+            style="
+                font-size:21px;
+                line-height:1.6;
+            "
+        >
+            Geen tijd om je hond uit te laten?
+        </p>
 
-<p style="font-size:19px;line-height:1.7;">
-Bekijk dan ook onze andere onderneming:
-<br>
-<strong>J&S Hondenuitlaatservice</strong> 🐾
-</p>
+        <p
+            style="
+                font-size:19px;
+                line-height:1.7;
+            "
+        >
+            Bekijk dan ook onze andere onderneming:
 
-<a href="https://samspaces.github.io/hondenuitlaatservice/"
-target="_blank"
-style="display:inline-block;margin-top:15px;padding:14px 24px;background:white;color:#1976d2;text-decoration:none;border-radius:999px;font-weight:bold;font-size:17px;">
-Bekijk de hondenuitlaatservice →
-</a>
+            <br>
 
-</div>
+            <strong>
+                J&amp;S Hondenuitlaatservice
+            </strong>
+            🐾
+        </p>
+
+        <a
+            href="https://samspaces.github.io/hondenuitlaatservice/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="
+                display:inline-block;
+                margin-top:15px;
+                padding:14px 24px;
+                background:white;
+                color:#1976d2;
+                text-decoration:none;
+                border-radius:999px;
+                font-weight:bold;
+                font-size:17px;
+            "
+        >
+            Bekijk de hondenuitlaatservice →
+        </a>
+
+    </div>
 
 </section>
-```
 
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
-<h2>J&amp;S Bezorgers</h2>
+    <h2>
+        J&amp;S Bezorgers
+    </h2>
 
-<p style="margin-top:10px;">
-Bedankt voor je bezoek aan onze website.
-</p>
+    <p style="margin-top:10px;">
+        Bedankt voor je bezoek aan onze website.
+    </p>
 
-<p style="margin-top:15px;font-size:14px;">
-© 2026 J&amp;S Bezorgers
-</p>
+    <p style="margin-top:15px;font-size:14px;">
+        © 2026 J&amp;S Bezorgers
+    </p>
 
 </footer>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
 
 <script>
 

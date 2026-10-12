@@ -20,8 +20,8 @@ html{
 
 body{
     font-family:Arial,sans-serif;
-    background:#eef6ff;
-    color:#173b63;
+    background:#F5F9FD;
+    color:#333;
 }
 
 /* =========================
@@ -29,7 +29,7 @@ body{
 ========================= */
 
 header{
-    background:linear-gradient(135deg,#1976d2,#69b3ff);
+    background:linear-gradient(135deg,#123FA8,#2B87D1);
     color:white;
     padding:70px 20px;
 }
@@ -59,13 +59,14 @@ header{
 }
 
 .brand-logo{
-    width:135px;
-    height:auto;
-    flex:0 0 135px;
+    width:112px;
+    height:112px;
+    object-fit:contain;
+    flex:0 0 112px;
     display:block;
     background:white;
-    border-radius:14px;
-    padding:5px;
+    border-radius:18px;
+    padding:8px;
     box-shadow:0 8px 24px rgba(0,0,0,.16);
 }
 
@@ -93,7 +94,9 @@ header{
 nav{
     position:sticky;
     top:0;
-    background:#0d5aa0;
+    background:#FFFFFF;
+    box-shadow:0 8px 28px rgba(0,0,0,.10);
+    border-bottom:3px solid #123FA8;
     z-index:100;
 }
 
@@ -102,7 +105,7 @@ nav{
     width:100%;
     background:none;
     border:none;
-    color:white;
+    color:#123FA8;
     font-size:28px;
     padding:14px;
     cursor:pointer;
@@ -119,7 +122,7 @@ nav{
 
 .menu a{
     display:block;
-    color:white;
+    color:#123FA8;
     text-decoration:none;
     font-weight:bold;
     padding:10px 16px;
@@ -128,8 +131,8 @@ nav{
 }
 
 .menu a:hover{
-    background:white;
-    color:#0d5aa0;
+    background:#EAF2FF;
+    color:#123FA8;
 }
 
 /* =========================
@@ -144,9 +147,11 @@ section{
 
 .card{
     background:white;
-    border-radius:16px;
-    padding:28px;
-    box-shadow:0 6px 18px rgba(0,0,0,.08);
+    border:1px solid rgba(18,63,168,.08);
+    border-radius:22px;
+    padding:32px;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+    transition:transform .25s ease,box-shadow .25s ease;
 }
 
 .card h2{
@@ -195,7 +200,7 @@ table{
 }
 
 th{
-    background:#1976d2;
+    background:#123FA8;
     color:white;
     padding:12px;
     text-align:left;
@@ -211,7 +216,7 @@ td{
 ========================= */
 
 .whatsapp-card{
-    background:linear-gradient(135deg,#1976d2,#69b3ff);
+    background:linear-gradient(135deg,#123FA8,#2B87D1);
     color:white;
     text-align:center;
 }
@@ -254,7 +259,7 @@ td{
 ========================= */
 
 footer{
-    background:#0d5aa0;
+    background:#123FA8;
     color:white;
     text-align:center;
     padding:20px;
@@ -282,8 +287,9 @@ footer{
     }
 
     .brand-logo{
-        width:90px;
-        flex-basis:90px;
+        width:78px;
+        height:78px;
+        flex-basis:78px;
     }
 
     .brand-heading h1{
@@ -760,7 +766,7 @@ footer{
     <div
         class="card"
         style="
-            background:linear-gradient(135deg,#1976d2,#69b3ff);
+            background:linear-gradient(135deg,#123FA8,#2B87D1);
             color:white;
             text-align:center;
         "
